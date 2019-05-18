@@ -387,6 +387,15 @@ textarea {
     .top-nav > a:nth-child(2) {
         display: none;
     }
+    .title {
+        padding-top: 33%;
+    }
+    #centre-nav {
+        height: 50%;
+    }
+    #centre-nav > a {
+        margin: 3px;
+    }
 
     #about-me {
         flex-direction: column;
@@ -474,8 +483,11 @@ textarea {
     .top-nav > a:not(:first-child) {
        margin: 0 5px; 
     }
+    #centre-nav {
+        height: 55%;
+    }
     .container {
-        padding: 5px;
+        padding: 10px;
     }
     #blog-layout {
         padding-top: 15%;
