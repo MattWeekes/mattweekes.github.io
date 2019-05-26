@@ -181,7 +181,7 @@ h1, h2, h3, h4, h5 {
 
 #blog-layout {
     display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
     flex-wrap: wrap;
     justify-content: center;
     padding: 5%;
@@ -283,6 +283,13 @@ h1, h2, h3, h4, h5 {
 
 .post-content > p {
     margin-bottom: 30px;
+}
+
+.quote {
+    font-style: italic;
+    margin-bottom: 30px;
+    padding: 5px;
+    background-color: rgb(247, 247, 247);
 }
 
 .author {
