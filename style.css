@@ -5,6 +5,10 @@
     font-family: 'Cabin', sans-serif;
 }
 
+sub, sup {
+    font-size: 1.8vh;
+}
+
 h1, h2, h3, h4, h5 {
     font-family: 'Patua One', cursive;
 }
@@ -182,7 +186,7 @@ h1, h2, h3, h4, h5 {
 #blog-layout {
     display: flex;
     flex-direction: row-reverse;
-    flex-wrap: wrap;
+    flex-wrap: wrap-reverse;
     justify-content: center;
     padding: 5%;
     background: #9AD8FF;
@@ -194,6 +198,8 @@ h1, h2, h3, h4, h5 {
 }
 
 .blog-link {
+    display: flex;
+    justify-content: center;
     height: 300px;
 }
 
@@ -238,6 +244,10 @@ h1, h2, h3, h4, h5 {
 .blog-name {
     text-align: center;
     padding-top: 15px;
+}
+
+.blog-name > h4 {
+    font-size: 3vh;
 }
 
 /* POST */
