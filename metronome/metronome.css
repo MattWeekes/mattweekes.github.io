@@ -136,7 +136,7 @@ button {
     align-items: center;
 }
 
-button:hover {
+button:hover, #becomeBtn:hover {
     background-color: #ff3b34;
     transform: scale(1.1);
 }
