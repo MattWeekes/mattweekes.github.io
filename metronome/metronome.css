@@ -1,0 +1,189 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h2 {
+    color: #eeeeee;
+}
+
+#instructions {
+    width: 100%;
+    cursor: pointer;
+    text-align: center;
+    background: #ccc;
+    color: #000;
+    font-size: 4vh;
+    font-weight: bold;
+}
+
+#hidden {
+    padding: 2%;
+    background: #000;
+    color: #fff;
+    width: 100%;
+    display: none;
+}
+
+#hidden > p {
+    margin-bottom: 20px;
+}
+
+#countdown {
+    text-align: center;
+    width: 16%;
+    height: 33%;
+    margin: 0 auto;
+    position: fixed;
+    left: 42%;
+    top: 33%;
+    font-size: 25vh;
+    color: #ff1a1a;
+    z-index: 10;
+}
+
+#main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    color: #ccc;
+    background: #1d1d1d;
+    flex-wrap: wrap;
+}
+
+.tile {
+    padding: 0.5% 2%;
+    width: 33%;
+    min-height: 95.5vh;
+}
+
+.inner-tile {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 90%;
+}
+
+#inner-display {
+    justify-content: flex-start;
+}
+
+
+#settings-metro {
+    justify-content: space-around;
+}
+
+.line {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 1% 0;
+}
+
+input {
+    padding: 5px;
+    text-align: center;
+    font-size: 4vh;
+    width: 33%;
+}
+
+.radio {
+    width: 50%;
+    text-align: center;
+    font-size: 4vh;
+}
+
+.radio > input {
+    width: 33%;
+    height: 33%;
+}
+
+#radio-div {
+    width: 33%;
+    padding: 5px;
+}
+
+.tile > h2 {
+    text-align: center;
+    font-size: 4vh;
+    padding-bottom: 5%;
+}
+
+button {
+    width: 25%;
+    font: bold 3vh arial, helvetica, sans-serif;
+    transition: 0.2s;
+    background: #ff1a1a;
+    border-radius: 6%;
+    cursor: pointer;
+    border: none;
+    margin: 0 3px;
+}
+#becomeBtn {
+    width: 25%;
+    font: bold 3vh arial, helvetica, sans-serif;
+    transition: 0.2s;
+    background: #ff1a1a;
+    border-radius: 6%;
+    cursor: pointer;
+    border: none;
+    margin: 0 3px;
+    text-decoration: none;
+    color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button:hover {
+    background-color: #ff3b34;
+    transform: scale(1.1);
+}
+
+p {
+    font-size: 3.4vh;
+}
+
+#inner-display > div {
+    font-size: 2.4vh;
+    margin-bottom: 5%;
+}
+
+#inner-display > div > p {
+    font-weight: bold;
+    color: #fff;
+}
+
+#current {
+    font-size: 4vh!important;
+    color: #ff645f;
+}
+
+#current > p {
+    font-size: 4vh;
+}
+
+#next {
+    font-size: 3.8vh!important;;
+    color: #ff1a1a;
+}
+
+#next > p {
+    font-size: 3.8vh;
+}
+
+@media only screen and (max-width: 1000px) {
+    .tile {
+        width: 100%;
+    }
+
+    .stickyBtn {
+        position: fixed;
+        bottom: 0px;
+        width: 96%;
+        height: 10%;
+        background: #000;
+        z-index: 10;
+    }
+}

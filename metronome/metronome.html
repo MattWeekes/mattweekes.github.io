@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8" />
+        <title>METRONOME APP - Matt Weekes</title>
+        <link rel="shortcut icon" type="image/png" href="../images/favicon.png" />
+        <meta name="description" content="Metronome App by Matt Weekes" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" media="screen" href="metronome.css" />
+    </head>
+    <body>
+        <div id="countdown"></div>
+        <div id="main">
+            <div id="instructions">INSTRUCTIONS</div>
+            <div id="hidden">
+                <p>With this metronome you can sequence your own customized BPM and Time Signature changes to loop through.</p>
+                <p>BPM - This sets your Beats Per Minute</p>
+                <p>Next Accent - This sets how long before the next accented beat. For Example if you wanted a 7/8 count with the 1, 4 and 6 beats accented 
+                    then you would add a 3 and two 2's to the sequence. (The first beat is always accented, the number you select in this field is how many beats 
+                    will be counted out before the next accent.)</p>
+                <p>Count Beats - Select whether the BPM is counting 1/4 notes or 1/8 notes.</p>
+                <p>Repeat - This quickly sets multiple repeats. For Example if you wanted three counts of 4/4 and one count of 3/4 to loop you would set:<br /> 
+                    [Next Accent: 4] [Count Beats: 1/4] [Repeats: 3] "Add To Sequence" (adding 3x bars of 4/4)<br />
+                    THEN<br />
+                    [Next Accent: 3] [Count Beats: 1/4] [Repeats: 1] "Add To Sequence" (adding 1x bar of 3/4). The sequence loops until you stop it.
+                </p>
+                <p>*Tip: The START button will always jump you to the SEQUENCE page. (for mobile)</p>
+            </div>
+            <div class="tile" id="settings-beats">
+                <h2>Beat Settings</h2>
+                <div class="inner-tile">
+                    <div class="line"><p>BPM:</p><input id="bpm" type="number" value="60"></div>
+                    <div class="line"><p>Next Accent After:</p><input id="beats" type="number" value="4"></div>
+                    <div class="line">
+                        <p>Count Beats:</p>
+                        <div id="radio-div" class="line">
+                            <div class="radio"><p>1/4</p><input name="count" id="1/4" type="radio" value="1/4" checked="yes"></div>
+                            <div class="radio"><p>1/8</p><input name="count" id="1/8" type="radio" value="1/8"></div>
+                        </div>
+                    </div>
+                    <div class="line"><p>Repeat:</p><input id="bars" type="number" value="1"></div>
+                    <div class="line stickyBtn">
+                        <button style="font-size: 2.5vh;" onclick="addSequence()">Add to Sequence</button>
+                        <a id="becomeBtn" href="#display" onclick="countdown()">Start</a>
+                        <button onclick="stop()">Stop</button>
+                        <button onclick="cleared()">Clear</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tile" id="display">
+                <h2>Sequence</h2>
+                <div class="inner-tile" id="inner-display">
+                    <div class="line" id="current">Current BPM<p id="currentBPMDisplay"></p>
+                    Note<p id="currentNoteDisplay"></p>
+                    Accent<p id="currentAccDisplay"></p>
+                    </div>
+
+                    <div class="line" id="next">Next BPM<p id="nextBPMDisplay"></p>
+                        Note<p id="nextNoteDisplay"></p>
+                        Accent<p id="nextAccDisplay"></p>
+                    </div>
+
+                    <div>BPM: <p id="displayBPM"></p></div>
+                    <div>Note:<p id="displayNote"></p></div>
+                    <div>Accents: <p id="displayBeats"></p></div>
+                </div>
+            </div>
+
+            <div class="tile">
+                <h2>Tone Settings</h2>
+                <div class="inner-tile" id="settings-metro">
+                    <div class="line"><p>Tone Duration:</p><input id="setdur" type="number" value="100"></div>
+                    <div class="line"><p>Tone Frequency:</p><input id="setfreq" type="number" value="600"></div>
+                    <div class="line"><p>Tone Volume:</p><input id="setvol" type="number" value="100" min="0" max="100"></div>
+                </div>
+            </div>
+        </div>
+        <script src="metronome.js"></script>
+    </body>
+</html>
