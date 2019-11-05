@@ -20,6 +20,8 @@ function beep(duration, frequency, volume, type, callback) {
     var volume = document.getElementById("setvol").value/100;
     var endCount = arrTS[x];
 
+    document.getElementById("countdown").style.display = 'none';
+
     //  DROP VOLUME FOR OFF BEATS
     if (currentCount > 1) {
         volume = volume/3;
@@ -130,9 +132,11 @@ function countdown() {
         var number = 5;
         timer = setInterval(function() {
         if (number > 1) {
+            document.getElementById("countdown").style.display = 'block';
             document.getElementById("countdown").innerHTML = number;
             number --;
         } else {
+            document.getElementById("countdown").style.display = 'block';
             document.getElementById("countdown").innerHTML = number;
             startBtn = 0;
             startMet();
@@ -140,8 +144,10 @@ function countdown() {
             number = 5;
         }}, 1000);
     } else if (arrTS.length == 0) {
+        document.getElementById("noseq").style.display = 'block';
         document.getElementById("noseq").innerHTML = "No Sequence";
         setTimeout(function() {
+            document.getElementById("noseq").style.display = 'none';
             document.getElementById("noseq").innerHTML = '';
         }, 2000);
     }
