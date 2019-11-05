@@ -43,6 +43,18 @@ h2 {
     z-index: 10;
 }
 
+#noseq {
+    text-align: center;
+    width: 100%;
+    height: 50%;
+    margin: 0 auto;
+    position: fixed;
+    top: 25%;
+    font-size: 15vh;
+    color: #ff1a1a;
+    z-index: 10;
+}
+
 #main {
     display: flex;
     flex-direction: row;

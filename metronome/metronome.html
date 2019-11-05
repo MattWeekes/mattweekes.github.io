@@ -9,6 +9,7 @@
     </head>
     <body>
         <div id="countdown"></div>
+        <div id="noseq"></div>
         <div id="main">
             <div id="instructions">INSTRUCTIONS</div>
             <div id="hidden">
@@ -37,7 +38,7 @@
                             <div class="radio"><p>1/8</p><input name="count" id="1/8" type="radio" value="1/8"></div>
                         </div>
                     </div>
-                    <div class="line"><p>Repeat:</p><input id="bars" type="number" value="1"></div>
+                    <div class="line"><p>Repeat:</p><input id="bars" type="number" value="1" min="1"></div>
                     <div class="line stickyBtn">
                         <button style="font-size: 2.5vh;" onclick="addSequence()">Add to Sequence</button>
                         <a id="becomeBtn" href="#display" onclick="countdown()">Start</a>

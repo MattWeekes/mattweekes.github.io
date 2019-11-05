@@ -138,9 +138,14 @@ function countdown() {
             startMet();
             clearInterval(timer);
             number = 5;
-        }
-    }, 1000);
-}}
+        }}, 1000);
+    } else if (arrTS.length == 0) {
+        document.getElementById("noseq").innerHTML = "No Sequence";
+        setTimeout(function() {
+            document.getElementById("noseq").innerHTML = '';
+        }, 2000);
+    }
+}
 
 function liveSeq() {
     document.getElementById("currentBPMDisplay").innerHTML = arrBPMdisplay[x];
